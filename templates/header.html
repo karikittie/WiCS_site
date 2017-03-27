@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    {% for cssFile in staticCSS %}<link rel="stylesheet" href="/static/CSS/{{ cssFile }}" />{% endfor %}
+    {% for JSFile in staticJS %}<script src="/static/JS/{{ JSFile }}" />{% endfor %}
+</head>
+<body>
