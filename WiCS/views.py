@@ -10,4 +10,4 @@ def home(request):
     staticCSS = os.listdir(os.path.join(BASE_STATIC, "CSS"))
     staticCSS = [file for file in staticCSS if file.endswith(".css")]
     staticJS = os.listdir(os.path.join(BASE_STATIC, "JS"))
-    return render_to_response('index.html', {'title': 'home', 'staticCSS': staticCSS, 'staticJS': staticJS})
+    return render_to_response('home.html', {'title': 'home', 'staticCSS': staticCSS, 'staticJS': staticJS})

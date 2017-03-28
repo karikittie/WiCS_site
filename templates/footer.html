@@ -1,5 +1,10 @@
 <footer>
-
+    <script>
+        document.write("&copy; WiCS-PSU, " + new Date().getFullYear());
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    {% for JSFile in staticJS %}<script src="/static/JS/{{ JSFile }}"></script>
+    {% endfor %}
 </footer>
 
 </body>

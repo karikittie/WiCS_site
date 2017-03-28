@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
-    {% for cssFile in staticCSS %}<link rel="stylesheet" href="/static/CSS/{{ cssFile }}" />{% endfor %}
-    {% for JSFile in staticJS %}<script src="/static/JS/{{ JSFile }}" />{% endfor %}
+    {% for cssFile in staticCSS %}<link rel="stylesheet" href="/static/CSS/{{ cssFile }}" />
+    {% endfor %}
 </head>
 <body>
+<header>
+    <h1>Women in Computer Science at PSU</h1>
+    <nav class="navbar navbar-fixed-top">
+        <div class="navbar-collapse collapse">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </div>
+    </nav>
+</header>
