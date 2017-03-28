@@ -1,10 +1,14 @@
 /* General CSS styles*/
 
-body {
-    text-align: center;
+
+.rounded-corners {
+    border-radius: 10px;
 }
 
-footer {
-    position: fixed;
-    bottom: 5px;
+.semi-transparent-dark {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.small-icon {
+    height: 25px;
 }
