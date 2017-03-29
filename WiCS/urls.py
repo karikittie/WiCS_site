@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from WiCS import views
 
 urlpatterns = [
-    url(r'^admin', admin.site.urls),
-    url(r'^home|', views.home, name='home'),
-    url(r'^profile', include('userProfiles.views')),
+    url(r'^admin/', admin.site.urls),
+    url(r'^/?$', views.home, name='home'),
+    url(r'^profile/', include('userProfiles.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

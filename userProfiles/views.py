@@ -6,22 +6,22 @@ from WiCS.views import getIncludes
 
 
 def profile(request):
-    return render_to_response('templates/profile.html', {'title': 'User Profile', **getIncludes()})
+    return render_to_response('profileTemplates/profile.html', {'title': 'User Profile', **getIncludes()})
 
 
-class UserRegistrationView(View):
+class UserLoginView(View):
     formClass = UserForm
-    templateName = 'registrationForm.html'
+    templateName = 'profileTemplates/loginForm.html'
 
     def get(self, request):
         form = self.formClass(None)
-        return render_to_response(self.templateName, {'form': form})
+        return render_to_response(self.templateName, {'form': form, **getIncludes()})
 
     def post(self, request):
         form = self.formClass(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-            #Clean data
+            # Clean data
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
             user.set_password(password)
@@ -31,4 +31,4 @@ class UserRegistrationView(View):
                 if user.is_active:
                     login(request, user)
                     return redirect('userProfiles:profile')
-        return render_to_response(self.templateName, {'form': form})
+        return render_to_response(self.templateName, {'form': form, **getIncludes()})
