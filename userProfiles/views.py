@@ -1,7 +1,9 @@
+import os
+
 from django.shortcuts import redirect, render_to_response
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import AuthenticationForm
 from django.views.generic import View
-from .forms import UserForm
 from WiCS.views import getIncludes
 
 
@@ -10,12 +12,13 @@ def profile(request):
 
 
 class UserLoginView(View):
-    formClass = UserForm
+    formClass = AuthenticationForm
     templateName = 'profileTemplates/loginForm.html'
 
     def get(self, request):
         form = self.formClass(None)
-        return render_to_response(self.templateName, {'form': form, **getIncludes()})
+        pathToStaticFiles = os.path.join(os.path.dirname('__file__'), 'static')
+        return render_to_response(self.templateName, {'form': form, **getIncludes(pathToStaticFiles)})
 
     def post(self, request):
         form = self.formClass(request.POST)
@@ -31,4 +34,4 @@ class UserLoginView(View):
                 if user.is_active:
                     login(request, user)
                     return redirect('userProfiles:profile')
-        return render_to_response(self.templateName, {'form': form, **getIncludes()})
+        return render_to_response(self.templateName, {'form': form, })

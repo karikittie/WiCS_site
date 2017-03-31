@@ -1,5 +1,9 @@
 /* General CSS styles*/
 
+/* This is to fix a header-nav bug in Bootstrap */
+body {
+    padding-top: 65px;
+}
 
 .rounded-corners {
     border-radius: 10px;
