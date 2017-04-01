@@ -2,7 +2,7 @@
 
 /* This is to fix a header-nav bug in Bootstrap */
 body {
-    padding-top: 55px;
+    padding-top: 50px;
 }
 
 .rounded-corners {
