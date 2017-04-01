@@ -9,6 +9,11 @@ body {
     border-radius: 10px;
 }
 
+.row:nth-of-type(even) {
+    background-color: rgba(245, 60, 230, 0.1);
+    border-radius: 5px;
+}
+
 .semi-transparent-dark {
     background-color: rgba(0, 0, 0, 0.80);
 }
