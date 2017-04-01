@@ -23,5 +23,7 @@ from WiCS import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^/?$', views.home, name='home'),
-    url(r'^profile/', include('userProfiles.urls')),
+    url(r'^about/', views.about, name='about'),
+    url(r'^contact/', views.contact, name='contact'),
+    # url(r'^profile/', include('userProfiles.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

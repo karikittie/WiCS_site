@@ -3,6 +3,7 @@ import os
 from django.shortcuts import redirect, render_to_response
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
+from django.views.decorators.csrf import csrf_protect
 from django.views.generic import View
 from WiCS.views import getIncludes
 
@@ -28,7 +29,6 @@ class UserLoginView(View):
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
             user.set_password(password)
-            user.save()
             user = authenticate(username=username, password=password)
             if user is not None:
                 if user.is_active:

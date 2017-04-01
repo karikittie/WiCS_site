@@ -3,9 +3,6 @@
         document.write("&copy; WiCS-PSU, " + new Date().getFullYear());
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <p><script>
-        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
-    </script></p>
     {% for JSFile in staticJS %}<script src="/static/JS/{{ JSFile }}"></script>
     {% endfor %}
     <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>

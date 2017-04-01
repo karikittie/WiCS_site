@@ -13,7 +13,7 @@
     </ul>
     <div class="tab-content clearfix">
         <div class="tab-pane active" id="1tab">
-            <form method="post" action="loginForm.html">
+            <form method="post">
                 {% csrf_token %}
                 {{ form }}
                 <button type="submit">login</button>

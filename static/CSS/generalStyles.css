@@ -2,7 +2,7 @@
 
 /* This is to fix a header-nav bug in Bootstrap */
 body {
-    padding-top: 65px;
+    padding-top: 55px;
 }
 
 .rounded-corners {
@@ -10,9 +10,15 @@ body {
 }
 
 .semi-transparent-dark {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.80);
 }
 
 .small-icon {
     height: 25px;
+}
+
+.medium-icon {
+    height: 75px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
