@@ -1,1 +1,29 @@
 /* General CSS styles*/
+
+/* This is to fix a header-nav bug in Bootstrap */
+body {
+    padding-top: 50px;
+}
+
+.rounded-corners {
+    border-radius: 10px;
+}
+
+.row:nth-of-type(even) {
+    background-color: rgba(245, 60, 230, 0.1);
+    border-radius: 5px;
+}
+
+.semi-transparent-dark {
+    background-color: rgba(0, 0, 0, 0.80);
+}
+
+.small-icon {
+    height: 25px;
+}
+
+.medium-icon {
+    height: 75px;
+    margin-right: 15px;
+    margin-left: 15px;
+}

@@ -3,7 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
-    {% for cssFile in staticCSS %}<link rel="stylesheet" href="/static/CSS/{{ cssFile }}" />{% endfor %}
-    {% for JSFile in staticJS %}<script src="/static/JS/{{ JSFile }}" />{% endfor %}
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
+    {% for cssFile in staticCSS %}<link rel="stylesheet" href="/static/CSS/{{ cssFile }}" />
+    {% endfor %}
 </head>
 <body>
+<header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Women in Computer Science</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="https://orgsync.com/158259/chapter" alt="org sync page" target="_blank">OrgSync</a></li>
+                    <li><a href="https://wics-psu.slack.com" alt="slack team" target="_blank">Slack</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+</header>
