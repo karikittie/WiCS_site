@@ -5,6 +5,11 @@ body {
     padding-top: 50px;
 }
 
+.profileImage {
+    width: 300px;
+    border-radius: 10px;
+}
+
 .rounded-corners {
     border-radius: 10px;
 }

@@ -13,10 +13,12 @@ def about(request):
 def contact(request):
     return render_to_response('contact.html', {'title': 'contact', **getIncludes()})
 
+def getBaseURL():
+    baseDirectory = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(baseDirectory, "static")
 
 def getIncludes(base=None):
-    baseDirectory = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    baseStatic = os.path.join(baseDirectory, "static")
+    baseStatic = getBaseURL()
     if base is not None:
         baseStatic = base
     staticCSS = os.listdir(os.path.join(baseStatic, "CSS"))
