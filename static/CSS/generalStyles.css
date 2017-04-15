@@ -5,6 +5,10 @@ body {
     padding-top: 50px;
 }
 
+.heroSlide {
+    min-height: 300px;
+}
+
 .profileImage {
     width: 300px;
     border-radius: 10px;
